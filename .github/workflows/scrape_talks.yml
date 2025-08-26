@@ -1,6 +1,3 @@
-permissions:
-  contents: write
-
 name: Scrape Talk Locations
 
 on:
@@ -10,21 +7,26 @@ on:
       - '_talks/**'
       - 'talkmap.ipynb'
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+      with:
+        persist-credentials: true
 
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.9'  # Specify the Python version you need
+        python-version: '3.9'
 
     - name: Install dependencies
       run: |
-        pip install jupyter pandas requests beautifulsoup4 geopy  # Add other dependencies as needed
+        pip install jupyter pandas requests beautifulsoup4 geopy
         pip install getorg --upgrade
 
     - name: Run Jupyter Notebook
