@@ -1,14 +1,14 @@
 ---
 permalink: /
-title:
+title: Research Interest
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-Research Interest
-===============
+<!-- 
+=============== -->
 Approximation Algorithms, Vehicle Routing, Sports Scheduling, Cycle/Path Partition Problems, Operations Research
 
 Work Experience
