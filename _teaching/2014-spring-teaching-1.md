@@ -2,9 +2,9 @@
 title: "xxx"
 collection: teaching
 type: "xxx course"
-permalink: /teaching/2014-spring-teaching-1
+# permalink: /teaching/2014-spring-teaching-1
 venue: "University xxx, Department xxx"
-date: 20xx-xx-xx
+date: 2025-01-01
 location: "City, Country"
 ---
 <!-- 

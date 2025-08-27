@@ -39,6 +39,15 @@
   }
 }
 
+.archive__item-title,
+.archive__item-title a {
+    text-decoration: none !important;
+    color: inherit; /* 保持字体颜色 */
+}
+.archive__item-title a:hover {
+    text-decoration: none !important;
+}
+
 .archive__item-title {
   margin-bottom: 0.25em;
   font-family: $sans-serif-narrow;

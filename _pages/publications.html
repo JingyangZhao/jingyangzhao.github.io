@@ -34,18 +34,13 @@ author_profile: true
             {% if post.venue %}<i>{{ post.venue }}</i>, {{ post.date | date: "%Y" }}.{% endif %}
           </p>
         {% else %}
-          <p style="margin-bottom:-0.6em; text-indent:-2em; padding-left:2em;">
-          [{{ counter }}]&nbsp;<strong>{{ post.title }}</strong>
-            <ul style="margin-left:2.4em; padding-left:0.5em; line-height:1em;">
-              {% if post.authors %}<li><em>{{ post.authors }}.</em></li>{% endif %}
-              {% if post.venue %}
-                <em>
-                  {{ post.venue }}
-                  {% if post.shortvenue %} ({{ post.shortvenue }}){% endif %}, {{ post.date | date: "%Y" }}.
-                </em>
-              {% endif %}
-            </ul>
-          </p>
+          <p style="margin-bottom:-0.6em; text-indent:-2.4em; padding-left:2.4em;">
+  [{{ counter }}]&nbsp;&nbsp;<strong>{{ post.title }}</strong>
+  <ul style="margin-left:2.8em; padding-left:0.5em; line-height:1.2em;">
+    {% if post.authors %}<li><em>{{ post.authors }}.</em></li>{% endif %}
+    {% if post.venue %}<li><em>{{ post.venue }}{% if post.shortvenue %} ({{ post.shortvenue }}){% endif %}, {{ post.date | date: "%Y" }}.</em></li>{% endif %}
+  </ul>
+</p>
         {% endif %}
         {% assign counter = counter | minus: 1 %}
       {% endfor %}
