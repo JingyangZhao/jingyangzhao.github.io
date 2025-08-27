@@ -11,26 +11,45 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
+{% assign pubs_by_year = site.publications | sort: "date" | reverse %}
+{% assign counter = pubs_by_year.size %}
+
+{% assign pubs_by_year_group = pubs_by_year | group_by_exp:"post", "post.date | date: '%Y'" | sort: "name" | reverse %}
+
+{% for year in pubs_by_year_group %}
+  <h2>{{ year.name }}</h2>
+
+  {% assign categories = "book,journal,conference" | split: "," %}
+  {% for cat in categories %}
+    {% assign items = year.items | where: "category", cat %}
+    
+    {% assign shortvenues = items | map: "shortvenue" | uniq | sort %}
+    {% for sv in shortvenues %}
+      {% assign items_in_sv = items | where: "shortvenue", sv | sort: "date" | reverse %}
+      {% for post in items_in_sv %}
+        {% if cat == "book" %}
+          <p>[{{ counter }}] 
+            {% if post.authors %}{{ post.authors }}. {% endif %}
+            {% if post.title %}{{ post.title }}. {% endif %}
+            {% if post.venue %}<i>{{ post.venue }}</i>, {{ post.date | date: "%Y" }}.{% endif %}
+          </p>
+        {% else %}
+          <p style="margin-bottom:-0.6em; text-indent:-2em; padding-left:2em;">
+          [{{ counter }}]&nbsp;<strong>{{ post.title }}</strong>
+            <ul style="margin-left:2.4em; padding-left:0.5em; line-height:1em;">
+              {% if post.authors %}<li><em>{{ post.authors }}.</em></li>{% endif %}
+              {% if post.venue %}
+                <em>
+                  {{ post.venue }}
+                  {% if post.shortvenue %} ({{ post.shortvenue }}){% endif %}, {{ post.date | date: "%Y" }}.
+                </em>
+              {% endif %}
+            </ul>
+          </p>
+        {% endif %}
+        {% assign counter = counter | minus: 1 %}
+      {% endfor %}
     {% endfor %}
   {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
 
-
-
+{% endfor %}
