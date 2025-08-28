@@ -14,7 +14,7 @@ Approximation Algorithms, Vehicle Routing, Sports Scheduling, Cycle/Path Partiti
 Work Experience
 ===============
 * **2025.09 – Now**: **Postdoc**, Kyung Hee University  
-  * Supervisor: [Hyundong Shin](https://cqilab.khu.ac.kr/) (*IEEE Fellow*)
+  * Supervisor: [Hyundong Shin](https://cqilab.khu.ac.kr/)
 
 * **2025.03 – 2025.08**: **Postdoc**, University of Electronic Science and Technology of China  
   * Supervisor: [Mingyu Xiao](https://sites.google.com/site/myxiao/home)
