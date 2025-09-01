@@ -1,22 +1,12 @@
 var addressPoints = [
   [
-    "Talk 2 on Relevant Topic in Your Field<br />London School of Testing; London, UK",
-    51.4893335,
-    -0.14405508452768728
+    "Approximation Algorithms for the Traveling Tournament Problem<br /><a href='https://conf.ccf.org.cn/web/api/m1018471650770948096166286416383.action'>Third National Outstanding Doctoral Forum in Theoretical Computer Science</a> of China Computer Federation (CCF); Qingdao, Shandong, China",
+    36.0663249,
+    120.3777659
   ],
   [
-    "Tutorial 1 on Relevant Topic in Your Field<br />UC-Berkeley Institute for Testing Science; Berkeley, CA, USA",
-    37.8708393,
-    -122.272863
-  ],
-  [
-    "Conference Proceeding talk 3 on Relevant Topic in Your Field<br />Testing Institute of America 2014 Annual Conference; Los Angeles, CA, USA",
-    34.0536909,
-    -118.242766
-  ],
-  [
-    "Talk 1 on Relevant Topic in Your Field<br />UC San Francisco, Department of Testing; San Francisco, CA, USA",
-    37.7792588,
-    -122.4193286
+    "Approximation Algorithms for Capacitated Vehicle Routing with Fixed Capacity<br /><a href='https://conf.orsc.org.cn/conferences/detail?id=25'>Second Forum for New Researchers in Operations Research</a> of Operations Research Society of China (ORSC); Guiyang, Guizhou, China",
+    26.6499922,
+    106.6246178
   ]
 ];
