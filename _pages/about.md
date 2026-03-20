@@ -54,8 +54,9 @@ Service
 * Organizing Committee
   * COCOON 2025 (The 31st International Computing and Combinatorics Conference)
 * Program Committee
-  * AAAI 2026
+  * AAAI 2026, IJCAI 2026
 * Reviewer
-  * Journal of Artificial Intelligence Research, Theoretical Computer Science, AAAI 2026
+  * Journal of Artificial Intelligence Research, Theoretical Computer Science, Information and Computation
+  * AAAI 2026, IJCAI 2026
 * External Reviewer
   * WALCOM 2022, WALCOM 2024, WALCOM 2025, COCOON 2025, STACS 2025
